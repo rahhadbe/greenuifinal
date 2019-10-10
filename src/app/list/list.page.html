@@ -4,24 +4,93 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-     Log Activity
+      Log Activity
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
+<link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css" />
+<script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
 <ion-content>
-  <!-- <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list> -->
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+  <accordion [closeOthers]="true">
+    <accordion-group heading="Steps Count" panelClass="customClass" [isOpen]="true">
+      <ion-card style="width:50vh">
+        <ngx-line-chart [dataSets]="scoreHistory" [xLabelFunction]="formXAxisValue.bind(this)"></ngx-line-chart>
+        <ion-card-header>
+          <ion-card-subtitle>Connected to device: MyFitbit</ion-card-subtitle>
+          <ion-card-title>Your steps today is worth {{scoreToday}} points</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Contribute towards saving the planet by walking instead of using carbon emitting vehicles
+          <ion-row>
+            <ion-col width=50>
+              <ion-button color="primary" (click)="syncWithDeviceDummy()">Sync with device</ion-button>
+            </ion-col>
+            <ion-col width=17>
+              <ion-icon name="logo-facebook"></ion-icon>
+            </ion-col>
+            <ion-col width=17>
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </ion-col>
+            <ion-col width=16>
+              <ion-icon name="logo-twitter"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </accordion-group>
+    <accordion-group heading="Cycling" panelClass="customClass">
+      <ion-card style="height:47vh">
+        <ion-row>
+          <ion-card-content>
+            <div id="myapp"></div>
+          </ion-card-content>
+        </ion-row>
+      </ion-card>
+      <ion-label style="text-align: center">You get {{mapScore}} points for travelling this distance</ion-label>
+    </accordion-group>
+    <accordion-group heading="Plantation" panelClass="customClass">
+      <ion-card style="height:45vh" class="bg-img1" >
+        <ion-card-header>
+          <input type='file' (change)="onSelectFile($event, 3)">
+        </ion-card-header>
+        <ion-card-content>
+          <img *ngIf="url" [src]="url" height="200">
+          <ion-label>You get {{score}} points for this</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </accordion-group>
+    <accordion-group heading="Using Public Transport" panelClass="customClass">
+      <ion-card style="height:45vh" class="bg-img2">
+        <ion-card-header>
+          <input type='file' (change)="onSelectFile($event, 4)">
+        </ion-card-header>
+        <ion-card-content>
+          <img *ngIf="url" [src]="url" height="200">
+          <ion-label>You get {{score}} points for this</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </accordion-group>
+    <accordion-group heading="Clean City" panelClass="customClass">
+      <ion-card style="height:45vh" class="bg-img3">
+        <ion-card-header>
+          <input type='file' (change)="onSelectFile($event, 5)">
+        </ion-card-header>
+        <ion-card-content>
+          <img *ngIf="url" [src]="url" height="200">
+          <ion-label>You get {{score}} points for this</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </accordion-group>
+    <accordion-group heading="Shram-Daan (श्रमदान)" panelClass="customClass">
+      <ion-card style="height:45vh" class="bg-img4">
+        <ion-card-header>
+          <input type='file' (change)="onSelectFile($event, 6)">
+        </ion-card-header>
+        <ion-card-content>
+          <img *ngIf="url" [src]="url" height="200">
+          <ion-label>You get {{score}} points for this</ion-label>
+        </ion-card-content>
+      </ion-card>
+    </accordion-group>
+  </accordion>
 </ion-content>

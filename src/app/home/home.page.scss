@@ -14,29 +14,20 @@ img{
 
 }
 
+.bg-class{
+  --background: linear-gradient(#FAFFD1 0%,#D3D3D3 100%) !important;
+}
+
 .myOverlay{
-  // width: 100%;
-  // height: 40%;
-  // padding-top:5%;
-  // text-align: center;
-  // position: absolute;
-  // z-index: 99;
-  // bottom: 20%;
-  // opacity: 0.5;
-  // color: white;
-  // font-weight: bold;
-  // background-color: black;
-    width: 100%;
-    /* height: 28%; */
-    /* padding-top: 5%; */
-    text-align: center;
-    position: absolute;
-    z-index: 99;
-    bottom: 12%;
-    opacity: 0.5;
-    color: white;
-    font-weight: bold;
-    background-color: black;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 99;
+  bottom: 12%;
+  opacity: 0.5;
+  color: white;
+  font-weight: bold;
+  background-color: black;
 }
 
 .ion-activatable {

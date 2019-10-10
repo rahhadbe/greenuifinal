@@ -11,12 +11,12 @@ export class FitbitDashboardPage implements OnInit {
 
   private monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-  private scoreHistory = [{
+   scoreHistory = [{
     name: 'Green Score',
     points: []
   }];
 
-  private scoreToday: number;
+   scoreToday: number;
 
   constructor() {}
 

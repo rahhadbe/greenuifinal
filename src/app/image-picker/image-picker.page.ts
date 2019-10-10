@@ -10,7 +10,7 @@ export class ImagePickerPage implements OnInit {
   @Input("activityType") activityType: string;
 
   private base64Image: string;
-  private url: string | ArrayBuffer;
+  url: string | ArrayBuffer;
 
   constructor() { }
 
@@ -26,7 +26,7 @@ export class ImagePickerPage implements OnInit {
 
       reader.onload = (event) => { // called once readAsDataURL is completed
         var enc = new TextDecoder("utf-8");
-        this.url = event.target['result'];
+        this.url = reader.result;
       }
     }
   }

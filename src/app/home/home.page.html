@@ -4,41 +4,40 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Talking Tree
     </ion-title>
     <ion-buttons slot="end">
       <ion-icon style="font-size:2em" name="contact"></ion-icon>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
+<ion-content class="bg-class"  style="height:47vh;">
   <ion-card>
-    <ion-slides #slider pager="true" [options]="slideOpts" (ionSlidesDidLoad)="slidesDidLoad(slider)">
+    <ion-slides #slider pager="true" (ionSlidesDidLoad)="slidesDidLoad(slider)">
       <ion-slide>
         <div class="myCard">
-          <img src="https://picsum.photos/900/500?random&t=1" class="new-collection" />
+          <img src="./assets/right_foot_forward.jpg" class="new-collection" />
           <div class="myOverlay">
-            <div class="card-title">Test</div>
-            <div class="card-subtitle">Test 123</div>
+            <!-- <div class="card-title">Test</div> -->
+            <div class="card-subtitle">Lets put our right foot forward!</div>
           </div>
         </div>
       </ion-slide>
       <ion-slide>
         <div class="myCard">
-          <img src="https://picsum.photos/900/500?random&t=2" class="new-collection" />
+          <img src="./assets/helping_hands.jpg" class="new-collection" />
           <div class="myOverlay">
-            <div class="card-title">Test</div>
-            <div class="card-subtitle">Test 123</div>
+            <!-- <div class="card-title">Test</div> -->
+            <div class="card-subtitle">Help them to help us !</div>
           </div>
         </div>
       </ion-slide>
       <ion-slide>
         <div class="myCard">
-          <img src="https://picsum.photos/900/500?random&t=3" class="new-collection" />
+          <img src="./assets/namaha.jpg" class="new-collection" />
           <div class="myOverlay">
-            <div class="card-title">Test</div>
-            <div class="card-subtitle">Test 123</div>
+            <!-- <div class="card-title">Test</div> -->
+            <div class="card-subtitle">Namaha Mattr Bhumi !!!</div>
           </div>
         </div>
       </ion-slide>
@@ -48,33 +47,35 @@
     <table>
       <tr>
         <td>
-          <ion-card class="ion-activatable">
+          <ion-card class="ion-activatable" routerLink="/logactivity" style="width: 25vh;">
             <img src="./assets/menu_1.jpg" />
             <ion-ripple-effect type="bounded"></ion-ripple-effect>
           </ion-card>
         </td>
         <td>
-          <ion-card class="ion-activatable">
-            <img src="./assets/menu_1.jpg" />
+          <ion-card class="ion-activatable" routerLink="/greenstore" style="width: 25vh;">
+            <img src="./assets/menu_2.jpg" />
             <ion-ripple-effect type="bounded"></ion-ripple-effect>
           </ion-card>
         </td>
       </tr>
       <tr>
         <td>
-          <ion-card class="ion-activatable">
-            <img src="./assets/menu_1.jpg" />
+          <ion-card class="ion-activatable" routerLink="/dashboard" style="width: 24vh;">
+            <img src="./assets/menu_3.jpg" />
             <ion-ripple-effect type="bounded"></ion-ripple-effect>
           </ion-card>
         </td>
         <td>
-          <ion-card class="ion-activatable">
-            <img src="./assets/menu_1.jpg" />
+          <ion-card class="ion-activatable" routerLink="/rewards" style="width: 25vh;">
+            <img src="./assets/menu_4.jpg" />
             <ion-ripple-effect type="bounded"></ion-ripple-effect>
           </ion-card>
         </td>
       </tr>
     </table>
   </div>
-
 </ion-content>
+<!-- <ion-content> -->
+  <label style="font-size: 12px; text-align: center;">Copyright © 2019 Hackformers. All rights reserved.</label>
+<!-- </ion-content> -->

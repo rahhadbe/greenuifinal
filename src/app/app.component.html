@@ -6,7 +6,7 @@
           <!-- <ion-title>Menu</ion-title> -->
           <ion-title>
             <ion-avatar class="mainlogo">
-              <img src="/assets/1.jpg" alt=""/>
+              <img src="./assets/splash_img.jpg" alt=""/>
             </ion-avatar>        
           </ion-title>
            
@@ -28,3 +28,8 @@
     <ion-router-outlet main></ion-router-outlet>
   </ion-split-pane>
 </ion-app>
+<div *ngIf="showSplash" class="splash">
+  <div>
+    <img src="./assets/splash_img.jpg" alt=""/>
+  </div>
+</div>

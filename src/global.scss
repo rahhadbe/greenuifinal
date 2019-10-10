@@ -25,7 +25,27 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@import '../node_modules/bootstrap/scss/bootstrap';
 
+.card.customClass,
+.card.customClass .card-header{
+    background-color:#1a793e;
+    color: #fff;
+} 
+.panel.customClass {
+    background-color: #fff;
+    color: #1a793e;
+}
+.card-body {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 0.25rem !important;
+}
+
+.btn-link,
+.btn-link:hover{
+    color: #fff;
+}
 // @import "~@node_modules/primeicons/primeicons.css";
 // @import "~@node_modules/primeng/resources/themes/nova-light/theme.css";
 // @import "~@node_modules/primeng/resources/primeng.min.css";

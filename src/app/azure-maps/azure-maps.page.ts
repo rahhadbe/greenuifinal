@@ -16,8 +16,6 @@ export class AzureMapsPage implements OnInit {
 
   ngOnInit() {
     this.map = new atlas.Map("myapp", {
-      language: 'en-US',
-      view: "Auto",
       center: this.pune,
       zoom: 13,
       authOptions: {
@@ -28,7 +26,7 @@ export class AzureMapsPage implements OnInit {
     this.map.controls.add(new atlas.control.ZoomControl(), {
         position: 'bottom-right'
     });
-    this.getMap()
+    this.getMap();
   }
 
   getMap(markerPos = this.pune) {
