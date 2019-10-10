@@ -1,0 +1,8 @@
+<ion-card>
+  <ion-card-header>
+    <input type='file' (change)="onSelectFile($event)">
+  </ion-card-header>
+  <ion-card-content>
+    <img *ngIf="url" [src]="url" height="200">
+  </ion-card-content>
+</ion-card>

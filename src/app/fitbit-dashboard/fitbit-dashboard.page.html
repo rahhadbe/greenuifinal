@@ -1,0 +1,34 @@
+<ion-content>
+  
+  <ion-card>
+    <ngx-line-chart [dataSets]="scoreHistory" [xLabelFunction]="formXAxisValue.bind(this)"></ngx-line-chart>
+
+    <ion-card-header>
+      <ion-card-subtitle>Connected to device: MyFitbit</ion-card-subtitle>
+      <ion-card-title>Your steps today is worth {{scoreToday}} points</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      
+      Contribute towards saving the planet by walking instead of using carbon emitting vehicles
+
+      <ion-row>
+        <ion-col width=50>
+          <ion-button color="primary" (click)="syncWithDeviceDummy()">Sync with device</ion-button>
+        </ion-col>
+        <ion-col width=17>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-col>
+        <ion-col width=17>
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </ion-col>
+        <ion-col width=16>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

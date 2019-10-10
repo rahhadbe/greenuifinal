@@ -1,0 +1,80 @@
+<ion-header style="--ion-background-color:#0ec254">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon style="font-size:2em" name="contact"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-slides #slider pager="true" [options]="slideOpts" (ionSlidesDidLoad)="slidesDidLoad(slider)">
+      <ion-slide>
+        <div class="myCard">
+          <img src="https://picsum.photos/900/500?random&t=1" class="new-collection" />
+          <div class="myOverlay">
+            <div class="card-title">Test</div>
+            <div class="card-subtitle">Test 123</div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="myCard">
+          <img src="https://picsum.photos/900/500?random&t=2" class="new-collection" />
+          <div class="myOverlay">
+            <div class="card-title">Test</div>
+            <div class="card-subtitle">Test 123</div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="myCard">
+          <img src="https://picsum.photos/900/500?random&t=3" class="new-collection" />
+          <div class="myOverlay">
+            <div class="card-title">Test</div>
+            <div class="card-subtitle">Test 123</div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-card>
+  <div>
+    <table>
+      <tr>
+        <td>
+          <ion-card class="ion-activatable">
+            <img src="./assets/menu_1.jpg" />
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+          </ion-card>
+        </td>
+        <td>
+          <ion-card class="ion-activatable">
+            <img src="./assets/menu_1.jpg" />
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+          </ion-card>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ion-card class="ion-activatable">
+            <img src="./assets/menu_1.jpg" />
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+          </ion-card>
+        </td>
+        <td>
+          <ion-card class="ion-activatable">
+            <img src="./assets/menu_1.jpg" />
+            <ion-ripple-effect type="bounded"></ion-ripple-effect>
+          </ion-card>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</ion-content>

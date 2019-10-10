@@ -1,0 +1,7 @@
+{
+  "name": "bankonsust",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
